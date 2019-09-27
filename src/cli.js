@@ -1,11 +1,9 @@
-const SelectInput = require('ink-select-input').default;
-const open = require('open');
-
-const figlet = require('figlet');
-const chalk = require('chalk');
-
 import React, {Component} from 'react';
 import {Box, Text, render} from 'ink';
+import SelectInput from 'ink-select-input';
+import chalk from "chalk";
+import figlet from 'figlet';
+import open from "open";
 
 const handleSelect = item => {
 	if (item.url) {
