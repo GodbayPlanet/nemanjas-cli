@@ -12,18 +12,19 @@
     },
     "license": "MIT",
     "dependencies": {
-        "ink": "^2.1.1",
-        "react": "^16.8.6",
         "chalk": "^2.4.2",
         "clui": "^0.3.6",
         "figlet": "^1.2.4",
         "import-jsx": "^2.0.0",
+        "ink": "^2.1.1",
         "ink-select-input": "^3.1.1",
-        "open": "^6.3.0"
+        "open": "^6.3.0",
+        "react": "^16.8.6"
     },
     "devDependencies": {
         "@babel/cli": "^7.6.2",
         "@babel/core": "^7.6.2",
+        "@babel/plugin-proposal-class-properties": "^7.5.5",
         "@babel/preset-env": "^7.6.2",
         "@babel/preset-react": "^7.0.0",
         "@babel/register": "^7.6.2"

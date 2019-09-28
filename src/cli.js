@@ -4,6 +4,7 @@ import SelectInput from 'ink-select-input';
 import chalk from "chalk";
 import figlet from 'figlet';
 import open from "open";
+import cliItems from './cli-items';
 
 const handleSelect = item => {
 	if (item.url) {
@@ -44,6 +45,29 @@ const textIntro = "Hi, I’m a full-time software developer working for codecent
 	"This is my CLI. Play with it and tell me what you think.";
 
 class CommandLineUi extends Component {
+
+	constructor() {
+		super();
+		this.state = {cliItems: cliItems}
+	}
+
+	createItems = items => {
+		for (const item of items) {
+			item.key = item.url || item.label;
+		}
+
+		return items;
+	};
+
+	handleSelect = cliItem => {
+		if (cliItem.url) {
+			open(cliItem.url);
+		}
+		if (cliItem.action) {
+			process.exit();
+		}
+	};
+
 	render() {
 		return (
 			<Box flexDirection="column">
@@ -53,7 +77,7 @@ class CommandLineUi extends Component {
 				<Box marginBottom={1}>
 					<Text>{chalk.bold(textIntro)}</Text>
 				</Box>
-				<SelectInput items={items} onSelect={handleSelect}/>
+				<SelectInput items={this.createItems(this.state.cliItems)} onSelect={this.handleSelect}/>
 			</Box>
 		);
 	}
