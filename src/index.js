@@ -1,3 +1,3 @@
 require('@babel/register');
 
-require('./cli');
+require('./command-line-ui');

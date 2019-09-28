@@ -5,10 +5,10 @@ import SelectInput from 'ink-select-input';
 import chalk from "chalk";
 import figlet from 'figlet';
 import open from "open";
-import cliItems from './cli-items';
 
-const textIntro = "Hi, I’m a full-time software developer working for codecentric. " +
-	"This is my CLI. Play with it and tell me what you think.";
+import cliItems from './cli-items';
+import introText from	'./intro-text';
+
 const log = console.log;
 
 class CommandLineUi extends Component {
@@ -48,7 +48,7 @@ class CommandLineUi extends Component {
 					{log(chalk.red(figlet.textSync('NeMaNJaS CLI', {horizontalLayout: 'full'})))}
 				</Box>
 				<Box marginBottom={1}>
-					<Text>{chalk.blue(textIntro)}</Text>
+					<Text>{chalk.bold(introText.intro)}</Text>
 				</Box>
 				<Divider title={'You can find me on'} titleColor={'red'} dividerColor={'blue'}/>
 				<Box>
