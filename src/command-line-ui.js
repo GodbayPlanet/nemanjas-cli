@@ -6,8 +6,8 @@ import chalk from "chalk";
 import figlet from 'figlet';
 import open from "open";
 
-import cliItems from './cli-items';
-import introText from	'./intro-text';
+import cliItems from './json-files/cli-items';
+import introText from './json-files/intro-text';
 
 const log = console.log;
 
