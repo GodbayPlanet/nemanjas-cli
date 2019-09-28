@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Box, render, Text} from 'ink';
+import {Box, render, Static, Text} from 'ink';
 import Divider from 'ink-divider';
 import SelectInput from 'ink-select-input';
 import chalk from "chalk";
@@ -8,6 +8,8 @@ import open from "open";
 
 import cliItems from './json-files/cli-items';
 import introText from './json-files/intro-text';
+
+const memoryVisualizer = require('memory-visualizer');
 
 const log = console.log;
 
@@ -42,8 +44,9 @@ class CommandLineUi extends Component {
 	};
 
 	render() {
+		memoryVisualizer.start(60, 'heapTotal', 1200);
 		return (
-			<Box flexDirection="column">
+			<Box flexDirection="column" marginBottom={1}>
 				<Box marginBottom={1}>
 					{log(chalk.red(figlet.textSync('NeMaNJaS CLI', {horizontalLayout: 'full'})))}
 				</Box>
