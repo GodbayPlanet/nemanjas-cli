@@ -8,6 +8,10 @@
         "url": "https://www.linkedin.com/in/nemanja-vasic-linked"
     },
     {
+        "label": "Twitter",
+        "url": "https://twitter.com/Nemanjas_Vasic"
+    },
+    {
         "label": "Quit",
         "action": "exit"
     }
