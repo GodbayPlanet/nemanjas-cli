@@ -12,7 +12,6 @@
     },
     "license": "MIT",
     "dependencies": {
-        "memory-visualizer": "^1.0.4",
         "chalk": "^2.4.2",
         "clui": "^0.3.6",
         "figlet": "^1.2.4",
