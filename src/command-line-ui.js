@@ -32,7 +32,7 @@ const CommandLineUi = () => {
 
   const showBlogs = item => {
     if (item.label === 'Blogs') {
-      item.blogs.forEach(blog => log(chalk.green(blog.name, chalk.underline.bgBlue(blog.url))));
+      item.blogs.forEach(blog => process.stdout.write(chalk.green(blog.name, chalk.underline.bgBlue(blog.url))));
     }
   };
 
