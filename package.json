@@ -1,6 +1,6 @@
 {
     "name": "nemanjas-cli",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "The Nemanjas CLI",
     "repository": "GodbayPlanet/nemanjas-cli",
     "main": "src/index.js",
